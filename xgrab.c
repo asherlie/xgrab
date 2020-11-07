@@ -65,6 +65,7 @@ void update(Window w){
 int main(int a, char** b){
     if(a < 2){
         printf("%s requires an argument\n", *b);
+        return 0;
     }
     Window w;
     if(find_window(b[1], &w))
@@ -78,5 +79,5 @@ int main(int a, char** b){
     printf("ret %i\n", XSetWindowBorderWidth(d, w, 9));
     printf("%i\n", XRaiseWindow(d, w));
     update(w);
-    return EXIT_SUCCESS;
+    return 0;
 }
